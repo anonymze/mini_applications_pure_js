@@ -1,0 +1,63 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+
+.clock {
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 350px;
+    height: 350px;
+    border: 15px solid black;
+    border-radius: 50%;  
+
+}
+
+/* container hands */
+
+.wrapper {
+    position: absolute;
+    display: flex;
+}
+
+.wrapper-hour {
+    height: 260px;
+    width: 260px;
+}
+
+.wrapper-minute {
+    height: 290px;
+    width: 290px;
+}
+
+.wrapper-second {
+    height: 320px;
+    width: 320px;
+}
+
+/* hands */
+
+.hand {
+    position: absolute;
+    height: 8px;
+    width: 50%;
+    background-color: black;
+    transform: rotate(90deg);
+    transform-origin: 100%; /* c'est ici qu'on change l'origine de rotation */
+    transition: transform 0.05s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.hour, .minute, .second  {
+    align-self: center;
+}
+
