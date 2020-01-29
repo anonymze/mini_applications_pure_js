@@ -1,0 +1,24 @@
+/* root définie la racine du document, soit <html> mais en encore plus fort ! on y met des variables de dans comme avec sass mais c'est -- à la place du $ */
+
+/* ces vars sont modifiables comme une propriété css dans le document HTML */
+:root {
+    --base: #ffc600;
+    --spacing: 10px;
+    --blur: 10px;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+img {
+    padding: var(--spacing);
+    background-color: var(--base);
+    filter: blur(var(--blur));
+}
+
+h1 {
+    text-align: center;
+    color: var(--base);
+}
