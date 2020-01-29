@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.dev.js"></script> -->
+    <title>Socket.io</title>
+  </head>
+  <body>
+    <div id="messages">
+      <input type="text" id="message" />
+      <button>Envoyer</button>
+    </div>
+
+    <div id="chat">
+      <ul>
+
+      </ul>
+    </div>
+
+
+    <script type="text/javascript" src="./js/socket.io.js"></script>
+    <script>
+      // on précise l'url que doit écouter io() , si on met rien il prend le port 3000 de base
+        const socket = io('http://localhost:3100');
+
+        const send = () => {
+          const text = document.getElementById('message').value;
+          socket.emit('chat_message', text) 
+        }
+
+        const receive = function(message) {
+          const li = document.createElement('li');
+          li.innerText = message;
+          document.querySelector('#chat ul').appendChild(li);
+        }
+
+        // envoie des messages au serveur
+        document.querySelector('button').addEventListener('click', send);
+
+        // recup des messages du serveur envoyés sur 'chat_message'
+        socket.on('chat_message', receive);       
+    </script>
+  </body>
+</html>
