@@ -1,7 +1,0 @@
-#!/bin/bash
-# Usage: git trio (add . commit push)
-
-git:
-    git add .
-    git commit -m "$m"
-    git push
