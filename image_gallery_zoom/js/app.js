@@ -13,7 +13,6 @@ function toggle_active(e) {
    }
 }
 
-
 // panels.forEach(panel => panel.addEventListener('click', toggle_open));
 
 
