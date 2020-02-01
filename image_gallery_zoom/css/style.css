@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.panels {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.panel p {
+    font-size: 50px;
+    color: white;
+}
+
+.panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.panel1 {
+    background-image: url('../images/index.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.panel2 {
+    background-image: url('../images/index2.jpg');
+    background-size: cover;
+}
+
+.panel3 {
+    background-image: url('../images/index3.jpg');
+    background-size: cover;
+}
+
+.panel4 {
+    background-image: url('../images/index4.jpg');
+    background-size: cover;
+}
+
+.panel5 {
+    background-image: url('../images/index5.jpg');
+    background-size: cover;
+}
