@@ -20,6 +20,16 @@ body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    transition: flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11);
+}
+
+.panel > * {
+    transition: transform 0.5s;
+}
+
+.panel.open {
+    flex: 5;
+    text-decoration: none;
 }
 
 .panel1 {
@@ -48,3 +58,10 @@ body {
     background-image: url('../images/index5.jpg');
     background-size: cover;
 }
+
+.panel > *:first-of-type { transform: translateY(-400%); }
+.panel.open-active > *:first-child { transform: translateY(0); }
+.panel > *:last-child { transform: translateY(400%); }
+.panel.open-active > *:last-child { transform: translateY(0); }
+
+
