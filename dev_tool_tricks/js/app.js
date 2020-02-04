@@ -35,7 +35,7 @@ console.assert(h1.classList.contains('hihi'), 'That is wrong');
 console.dir(h1);
 
 // grouping together, fais la différence entre les loop et les mets dans un group
-dogs.forEach( dog => {
+dogs.forEach(dog => {
     // console.group(dog.name);
     console.groupCollapsed(dog.name);
     console.log(`${dog.name} is ${dog.age} years old`);
@@ -52,7 +52,7 @@ console.count('wes');
 console.time('fetching data');
 fetch('https://api.github.com/users/wesbos')
     .then(data => data.json())
-    .then( data => {
+    .then(data => {
         console.timeEnd('fetching data');
         console.log(data);
     })
