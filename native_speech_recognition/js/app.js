@@ -9,7 +9,21 @@ window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecogn
   words.appendChild(p);
 
   recognition.addEventListener('result', e => {
-    console.log(e);
-      });
+    const transcript = Array.from(e.results)
+      .map(result => result[0])
+      .map(result => result.transcript)
+      .join('')
 
+      p.textContent = transcript;
+      if (e.resulsts[0].isFinal) {
+        p = document.createElement('p');
+        words.appendChild(p);
+      }
+
+      if(transcript.includes('cactus')) {
+        console.log(🌵🌵🌵🌵🌵🌵🌵🌵🌵🌵🌵🌵🌵🌵🌵🌵);
+      }
+  });
+
+recognitionition.addEventListener('end', recognition.start); // Pour lui dire que quand on arrete de parler, tu te remets à couter. Sinon il écoute 1 fois et stop
 recognition.start();
