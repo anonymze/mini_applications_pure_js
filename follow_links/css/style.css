@@ -1,0 +1,33 @@
+body {
+    width: 100%;
+    margin: 0;
+    background-color: bisque;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+div {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.highlight {
+    transition: transform .3s, width .3s, height .3s;
+    background-color: white;
+    border-bottom: 2px solid white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 10px;
+    display: block;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
