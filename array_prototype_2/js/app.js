@@ -51,7 +51,7 @@ const one_people = people.find(person => person.name === 'Thom');
 // trouve l'index de l'element trouvé dans le tableau, find_index = 4
 const find_index = people.findIndex(person => person.year === 1723);
 
-// if you want to take only the index found (find serait meilleur) et en même temps retirer du tableau d'origine
+// if you want to take only the index found (find serait meilleur) et en même temps le prendre du tableau d'origine
 const hihi = people.splice(find_index, 1);
 
 // if you want to retire the index, modify directement le tableau originel, marche pas dans une var
